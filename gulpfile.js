@@ -3,7 +3,8 @@
  */
 
 var gulp = require('gulp');
-var browserify = require('gulp-browserify');
+var sourcemaps= require('gulp-sourcemaps');
+var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var connect = require('gulp-connect');
 var less = require('gulp-less');
@@ -15,7 +16,8 @@ var embedlr = require('gulp-embedlr');
 
 gulp.task('scripts', function() {
     gulp.src(['app/src/**/*.js'])
-        .pipe(browserify())
+        .pipe(sourcemaps.init())
+        .pipe(babel())
         .pipe(concat('dest.js'))
         .pipe(gulp.dest('dist/build'))
         .pipe(refresh(server));
