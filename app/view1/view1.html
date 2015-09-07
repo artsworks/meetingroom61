@@ -1,1 +1,26 @@
 <p>This is the partial for view 1</p>
+
+Data Binding<br/>
+<input ng-model="inputData" placeholder="ng-model"><br/>
+<input ng-value="inputData" placeholder="ng-value"><br/>
+<span>{{inputData}}</span>
+
+<br/><br/>
+
+Ng-repeat | Sort By: Name
+<a href="javascript:;" ng-click="sortByName(false)">Asc</a>
+<a href="javascript:;" ng-click="sortByName(true)">Desc</a>
+| Sort By: Title
+<a href="javascript:;" ng-click="sortByTitle(false)">Asc</a>
+<a href="javascript:;" ng-click="sortByTitle(true)">Desc</a>
+
+<div ng-repeat="person in people track by $index">
+    {{$index}} : {{person.name}} - {{person.title}}
+</div>
+
+<br/>
+
+Route Info: {{routeInfo()}}
+
+
+
