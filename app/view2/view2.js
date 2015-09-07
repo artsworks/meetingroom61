@@ -7,6 +7,6 @@ angular.module('myApp.view2', ['ngRoute'])
     templateUrl: 'view2/view2.html',
     controller: 'View2Ctrl'
   })
-]).controller('View2Ctrl', ['$scope', $scope => {
+]).controller('View2Ctrl', [() => {
 
 }]);
